@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#123d32">
+  <title>Infinity Football 2027</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">∞</span><span>INFINITY <strong>FOOTBALL</strong><small>2027</small></span></div>
+      <div class="top-actions">
+        <button id="soundBtn" class="icon-btn" type="button" aria-label="Mute sound" title="Mute sound"><span id="soundIcon">♪</span></button>
+        <button id="pauseBtn" class="icon-btn hidden" type="button" aria-label="Pause match" title="Pause match">Ⅱ</button>
+      </div>
+    </header>
+
+    <section class="arena" aria-label="Football game">
+      <div class="matchbar" id="matchbar" aria-live="polite">
+        <div class="team-score"><span id="homeDot" class="team-dot"></span><span id="homeName">NOVA</span><strong id="homeScore">0</strong></div>
+        <div class="clock-wrap"><span id="period">1ST HALF</span><strong id="clock">00:00</strong></div>
+        <div class="team-score away"><strong id="awayScore">0</strong><span id="awayName">COMETS</span><span id="awayDot" class="team-dot"></span></div>
+      </div>
+      <canvas id="pitch" width="1100" height="660" aria-label="Football pitch"></canvas>
+      <div id="toast" class="toast" aria-live="assertive"></div>
+
+      <div id="screen" class="screen start-screen">
+        <div class="screen-content start-content">
+          <div class="eyebrow">QUICK MATCH · 5-A-SIDE</div>
+          <h1>Make every<br><em>move count.</em></h1>
+          <p>Find the pass. Beat the press. Bend one into the corner.</p>
+          <button id="playBtn" class="primary-btn" type="button">PLAY MATCH <span aria-hidden="true">↗</span></button>
+          <div class="start-controls"><span><b>MOVE</b> WASD / ARROWS</span><span><b>PASS</b> J / SPACE</span><span><b>SHOOT</b> K</span><span><b>SPRINT</b> SHIFT</span></div>
+        </div>
+        <div class="start-stamp">YOUR PITCH.<br>YOUR MOMENT.</div>
+      </div>
+
+      <div id="mobileControls" class="mobile-controls hidden" aria-label="Touch controls">
+        <div id="joystick" class="joystick" aria-label="Movement joystick"><div id="stick" class="stick"></div></div>
+        <div class="action-controls">
+          <button id="sprintTouch" class="action-btn sprint" type="button">SPRINT</button>
+          <button id="passTouch" class="action-btn pass" type="button">PASS</button>
+          <button id="shootTouch" class="action-btn shoot" type="button">SHOOT</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer"><span>MOVE <b>WASD / ↑←↓→</b></span><span>PASS / TACKLE <b>J / SPACE</b></span><span>HOLD + RELEASE TO SHOOT <b>K</b></span><span>SPRINT <b>SHIFT</b></span><span>SWITCH <b>Q</b></span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
